@@ -1,1 +1,130 @@
+🚀 Cryptocurrency Price Monitor
+A production-ready, full-stack application for real-time cryptocurrency price tracking and user-configurable alerts. Built with a modern tech stack and optimized for scalability.
+✨ Features
 
+Real-Time Monitoring: Live cryptocurrency price tracking with automatic updates
+Custom Price Alerts: Set personalized alerts for specific price thresholds
+Secure Authentication: User registration and login powered by Supabase
+Modern UI/UX: Sleek dark theme featuring glass-morphism and responsive design
+Robust Error Handling: Comprehensive error management for smooth user experience
+Optimized Performance: In-memory caching system for efficient API usage
+
+🛠️ Tech Stack
+
+Frontend:
+
+React with TypeScript
+Tailwind CSS for styling
+Zustand for state management
+
+
+Backend:
+
+Node.js with TypeScript
+Supabase for authentication and database
+CoinMarketCap API integration
+
+
+Infrastructure:
+
+Docker and docker-compose
+PostgreSQL (via Supabase)
+Real-time WebSocket connections
+
+
+
+🚦 Prerequisites
+
+Node.js (v16 or higher)
+npm or yarn
+Docker and docker-compose (for production deployment)
+CoinMarketCap API key
+Supabase account and project
+
+📦 Installation
+
+Clone the repository
+bashCopygit clone https://github.com/your-username/crypto-price-monitor.git
+cd crypto-price-monitor
+
+Set up environment variables
+bashCopycp .env.example .env
+Configure the following in your .env file:
+
+VITE_COINMARKETCAP_API_KEY
+SUPABASE_URL
+SUPABASE_KEY
+
+
+Install dependencies
+bashCopynpm install
+
+Start the application
+Development mode:
+bashCopynpm run dev
+Production mode:
+bashCopydocker-compose up --build
+
+
+🎯 Usage Guide
+
+Authentication
+
+Register a new account or log in
+Secure session management via Supabase
+
+
+Dashboard
+
+View real-time cryptocurrency prices
+Track multiple currencies simultaneously
+Customize display preferences
+
+
+Alert Management
+
+Create price-based alerts
+Configure threshold values
+Set notification preferences
+
+
+Notifications
+
+Receive instant alerts when conditions are met
+View notification history
+Manage notification settings
+
+
+
+🔧 Architecture Overview
+mermaidCopygraph TD
+    A[Frontend React App] -->|API Requests| B[Node.js Backend]
+    B -->|Price Data| C[CoinMarketCap API]
+    B -->|Auth/Database| D[Supabase]
+    B -->|Cache| E[In-Memory Cache]
+🛡️ Security Features
+
+Environment variable protection
+JWT-based authentication
+Row-level security in Supabase
+API rate limiting
+Input sanitization
+
+🔍 Key Solutions
+
+API Rate Limiting: Implemented intelligent caching to optimize API usage
+Real-time Updates: WebSocket connections for live price updates
+Responsive Design: Mobile-first approach with Tailwind CSS
+State Management: Efficient state handling with Zustand
+Error Recovery: Graceful fallback mechanisms and retry logic
+
+🤝 Contributing
+
+Fork the repository
+Create your feature branch (git checkout -b feature/amazing-feature)
+Commit your changes (git commit -m 'Add amazing feature')
+Push to the branch (git push origin feature/amazing-feature)
+Open a Pull Request
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
